@@ -16,6 +16,6 @@ When('I press login', () => {
     cy.get('button[type=submit]').click()
 });
 
-Then('the url on the website should contain {string}', (contain) => {
-    cy.url().should('contain', (contain))
+Then('error message {string} should appear', (contain) => {
+    cy.get('p').should('contain', (contain))
 });
